@@ -10,7 +10,8 @@ with webdriver.Chrome() as browser:
 
     div = browser.find_element(By.XPATH, '//*[@id="scroll-container"]/div')
     for x in range(10):
-        ActionChains(browser).move_to_element(div).scroll_by_amount(1, 10).perform()
+        ActionChains(browser).move_to_element(
+            div).scroll_by_amount(1, 10).perform()
         time.sleep(0.1)
 
     elements = browser.find_elements(By.XPATH, '//span[starts-with(@id, "__InfiScroll_")]')

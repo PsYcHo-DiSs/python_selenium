@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 URL = "https://parsinger.ru/selenium/5.8/2/index.html"
+
 with webdriver.Chrome() as driver:
     driver.get(URL)
     buttons = driver.find_elements(By.XPATH, "//input[@class='buttons']")
